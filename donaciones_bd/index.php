@@ -22,8 +22,8 @@
             </ul>
         
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="p_login.php"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+                <li><a href="p_alta_donante.php"><span class="glyphicon glyphicon-log-in"></span> Registro</a></li>
             </ul>
         </div>
     </nav>
