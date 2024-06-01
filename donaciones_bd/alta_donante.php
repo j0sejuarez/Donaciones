@@ -14,7 +14,7 @@ if (isset($_POST['nombre_d'], $_POST['ap_pat_d'],$_POST['ap_mat_d'],$_POST['tele
             Apellido_Mat_Donante,Tel_Donante,Correo_Donante,Pwd_Donante) 
             values ('$nombre_d','$ap_pat_d','$ap_mat_d','$telefono_d','$correo_d','$pwd_d')";
             if(mysqli_query($link,$sql)){
-               echo "Se registro el donante";
+                header('Location: http://localhost/donaciones_bd/p_login.php');
             } 
             else {
                     echo "Error de registro";

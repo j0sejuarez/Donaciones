@@ -26,7 +26,7 @@
                 <p><label for='correo_d'>Correo</label></p>
                 <input class="int" type="text" id ="correo_d" name="correo_d" required>
                 <p>
-                <p><label for='pwd_d'>Contrasenia</label></p>
+                <p><label for='pwd_d'>Contraseña</label></p>
                 <input class="int" type ="password" id ="pwd_d" name="pwd_d" required>
                 <p>
                     <input class="boton" type="submit" value="Registrar">
