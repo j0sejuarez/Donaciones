@@ -31,7 +31,7 @@
         </h1>
         <div class="bloque">
             <div class="parte1">
-                
+                <img src="imagenes/donaciona.png" alt="donaciona" class="ajustar-imagen">
             </div>
             <div class="parte2">
                 <h2>
@@ -45,7 +45,7 @@
                 </form>
             </div>
             <div class="parte3">
-                          
+                <img src="imagenes/donacionb.png" alt="donacionb" class="ajustar-imagen">
             </div>
             <div class="parte4">            
                 <h2>
@@ -59,6 +59,7 @@
                 </form> 
             </div>
             <div class="parte5">
+                <img src="imagenes/donacionc.png" alt="donacionc" class="ajustar-imagen">
                 
             </div>
             <div class="parte6">

@@ -9,10 +9,10 @@
     <body>
         <div id="bloque">
             <div class="parte1">
-                <img src="hands-holding-hearts.svg" alt="Italian Trulli" class="img">
+                <img src="imagenes/portada2.png" alt="portada" class="img">
             </div>
             <div class="parte2">
-                <h1>Registrar donante</h1>
+                <h1>Registro de donante</h1>
                 <form method="post" action="alta_donante.php" id=form>
                     <input class="int" type ="text" id ="nombre_d" name="nombre_d" required placeholder="Nombre"><br>
                     <input class="int" type="text" id ="ap_pat_d" name="ap_pat_d" required placeholder="Apellido Paterno"><br>
@@ -23,6 +23,19 @@
                     <input class="boton" type="submit" value="Registrar">
             </form>
             </div>
+            </div>
+    <div id="estrellas">
+        <img src="imagenes/estrella.png" alt="Estrella" class="estrella">
+    </div>
+    <div id="barda">
+        <img src="imagenes/barda.png" alt="barda" class="barda">
+    </div>
+    <div id="barda2">
+        <img src="imagenes/barda2.png" alt="barda2" class="barda2">
+    </div>
+    <div id="barda3">
+        <img src="imagenes/barda3.png" alt="barda3" class="barda3">
+    </div>
         </div>
     </body>
 </html>
