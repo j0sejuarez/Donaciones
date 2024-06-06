@@ -1,0 +1,144 @@
+body {
+	background: #ede0d3;
+}
+
+h1 {
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 1px;
+}
+
+.bloque {
+	/*background: red;*/
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr; 
+	height: 200VH;
+	grid-gap: 30px;
+	padding: 35px;
+}
+
+.bloque > div {
+	/*border: 2px solid rgb(255 0 0);*/
+}
+
+.parte1 {
+	display: grid;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	background-color:#FFD690;
+	justify-content: center;
+	align-items: center;
+	height: 60VH;
+}
+
+.parte2 {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	background-color:#FFD690;
+	height: 60VH;
+	justify-content: center;
+	align-items: center;
+}
+
+.parte3 {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	background-color:#FFD690;
+	height: 60VH;
+	justify-content: center;
+	align-items: center;
+}
+
+.parte4 {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	background-color:#FFD690;
+	height: 60VH;
+	justify-content: center;
+	align-items: center;
+}
+
+.parte5 {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	background-color:#FFD690;
+	height: 60VH;
+	justify-content: center;
+	align-items: center;
+}
+
+.parte6 {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	background-color:#FFD690;
+	height: 60VH;
+	justify-content: center;
+	align-items: center;
+}
+
+h2 {
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 1px;
+	margin-top: 5VH;
+}
+
+p {
+	font-family: arial;
+	font-size: 20px;
+	padding: 30px 30px 5px 30px;
+	text-align: justify;
+}
+
+#form {
+	text-align: center;
+}
+
+input[type=submit] {
+    appearance: none;
+    font-size: 20px;
+    color: white;
+    background:#7A5302;
+    width: 190px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    justify-content: center;
+}
+
+input[type=submit]:hover {
+	background:#BB7F02;
+    width: 200px;
+    padding: 13px;
+}
+
+input[type=submit]:focus {
+	background:#7A5302;
+	width: 190px;
+    padding: 15px;
+}
+
+footer {
+	margin-top: 50px;
+	text-align: center;
+	padding: 30px;
+	background-color: DarkSalmon;
+	color: white;
+}
+
+.p_footer {
+	text-align: center;
+}
