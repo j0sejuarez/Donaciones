@@ -1,0 +1,157 @@
+
+body {
+	background: #ede0d3;
+}
+
+.bloque {
+	/*background: red;*/
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr; 
+	height: 120VH;
+	grid-gap: 30px;
+	padding: 35px;
+}
+
+.bloque > div {
+	/*border: 2px solid rgb(255 0 0);*/
+}
+
+.parte1 {
+	display: grid;
+	grid-column-start: 1;
+	grid-column-end: 5;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	background-color:#FFD690;
+	justify-content: center;
+	align-items: center;
+	height: 60VH;
+}
+
+.parte2 {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	background-color:#FFD690;
+	width: 40VW;
+	height: 50VH;
+	justify-content: center;
+	align-items: center;
+}
+
+p {
+	font-family: arial;
+	font-size: 20px;
+	padding: 30px;
+	text-align: justify;
+}
+
+#form {
+	text-align: center;
+}
+
+input[type=submit] {
+    appearance: none;
+    font-size: 20px;
+    color: white;
+    background:#7A5302;
+    width: 190px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    justify-content: center;
+}
+
+input[type=submit]:hover {
+	background:#BB7F02;
+    width: 200px;
+    padding: 13px;
+}
+
+input[type=submit]:focus {
+	background:#7A5302;
+	width: 190px;
+    padding: 15px;
+}
+
+.parte3 {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	background-color:#FFD690;
+	height: 50VH;
+}
+
+.parte4 {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	background-color:#FFD690;
+	height: 50VH;
+}
+
+.parte5 {
+	grid-column-start: 4;
+	grid-column-end: 5;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	background-color:#FFD690;
+	height: 50VH;
+}
+
+hr.rounded {
+  width: 95%;
+  border-top: 5px solid #bbb;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+.bloque2 {
+	/*background: red;*/
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr; 
+	height: 60VH;
+	grid-gap: 30px;
+	padding: 35px;
+}
+
+.bloque2 > div {
+	/*border: 2px solid rgb(255 0 0);*/
+}
+
+.parte6 {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	background-color:#FFD690;
+	height: 50VH;
+}
+
+h1 {
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 1px;
+}
+
+.parte7 {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	background-color:#FFD690;
+	height: 50VH;
+}
+
+footer {
+	margin-top: 50px;
+	text-align: center;
+	padding: 30px;
+	background-color: DarkSalmon;
+	color: white;
+}
+
+.p_footer {
+	text-align: center;
+}
