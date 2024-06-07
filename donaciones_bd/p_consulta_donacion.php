@@ -85,9 +85,9 @@
 <div id="bloque">
     <h1>Consultar donacion</h1>
     <form method="post" action="">
-        <p>
+        <h2>
             <label for="id_d">ID Donante</label>
-        </p>
+        </h2>
         <input class="int" type="number" id="id_d" name="id_d" required>
         <p>
             <input class="boton" type="submit" value="Consultar">
