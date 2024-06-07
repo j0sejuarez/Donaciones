@@ -1,3 +1,9 @@
+<?php
+session_start();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang='es'>
 <head>
@@ -17,14 +23,49 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Inicio</a></li>
+            </ul>
+            <?php
+                if (isset($_SESSION['Correo_Donante']) && $_SESSION['Correo_Donante'] == 'josefjaceves@gmail.com') {
+                    echo '
+                    <ul class="nav navbar-nav">
+                    <li><a href="p_alta_donacion.php">Donaciones</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Consulta <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="p_consulta_donante.php">Donantes</a></li>
+                        <li><a href="p_consulta_donacion.php">Donaciones</a></li>
+                    </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Eliminar <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="p_baja_donante.php">Donantes</a></li>
+                        <li><a href="p_baja_donacion.php">Donaciones</a></li>
+                    </ul>
+                    </li>
+                </ul>';
+            } else {
+                echo '
+                <ul class="nav navbar-nav">
                 <li><a href="p_donaciones.php">Donaciones</a></li>
-                <li><a href="#">Consulta</a></li>
-            </ul>
+                </ul>';
+            }
+            ?>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="p_login.php"><span class="glyphicon glyphicon-user"></span> Login</a></li>
-                <li><a href="p_alta_donante.php"><span class="glyphicon glyphicon-log-in"></span> Registro</a></li>
-            </ul>
+
+            <?php
+            if (isset($_SESSION['Correo_Donante'])) {
+                echo '
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="p_usuario.php"><span class="glyphicon glyphicon-user"></span> '.$_SESSION['Correo_Donante'].'</a></li>
+                    <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Cerrar Sesión</a></li>
+                </ul>';
+            } else {
+                echo '
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="p_login.php"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+                    <li><a href="p_alta_donante.php"><span class="glyphicon glyphicon-log-in"></span> Registro</a></li>
+                </ul>';
+            }
+            ?>
         </div>
     </nav>
     <div class="bloque">

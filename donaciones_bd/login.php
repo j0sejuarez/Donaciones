@@ -15,7 +15,6 @@
             mysqli_close($link);
             
             if(isset($correo)){
-               // echo " y se encontro el usuario $mat";
                $_SESSION['Correo_Donante'] = $correo;
                $_SESSION['idDonante'] = $id;
                header('Location: http://localhost/donaciones_bd/index.php');
