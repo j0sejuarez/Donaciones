@@ -1,3 +1,4 @@
+
 body {
     background: #ADBCFF;
 }
@@ -11,7 +12,7 @@ body {
     padding: 35px;
 }
 
-.bloque > div {
+.bloque > div,.bloque2 > div  {
     border: 4px solid rgb(255, 255, 255);
 }
 
@@ -41,6 +42,7 @@ body {
 }
 
 p {
+	color: white;
     font-family: Arial;
     font-size: 20px;
     padding: 30px;
@@ -55,7 +57,7 @@ input[type=submit] {
     appearance: none;
     font-size: 20px;
     color: white;
-    background: #0050fc;
+    background: #4885FF;
     width: 190px;
     padding: 15px;
     border: none;
@@ -102,7 +104,13 @@ input[type=submit]:focus {
     height: 50vh;
 }
 
-
+hr.rounded {
+  	width: 95%;
+  	border-top: 5px solid white;
+  	border-radius: 5px;
+  	display: grid;
+  	margin-top: 0px;
+}
 
 .bloque2 {
     display: grid;
@@ -121,6 +129,7 @@ input[type=submit]:focus {
 }
 
 h1 {
+	color: white;
     text-align: center;
     font-weight: bold;
     margin-bottom: 1px;
