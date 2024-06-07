@@ -17,7 +17,7 @@
             if(isset($correo)){
                $_SESSION['Correo_Donante'] = $correo;
                $_SESSION['idDonante'] = $id;
-               header('Location: http://localhost/donaciones_bd/index.php');
+               header('Location: http://localhost/Donaciones-main/donaciones_bd/index.php');
             } else{
                 echo " Usuario no encontrado";
             }
