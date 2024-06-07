@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang='es'>
 <head>
@@ -18,16 +22,24 @@
             <ul class="nav navbar-nav">
                 <li><a href="index.php">Inicio</a></li>
                 <li class="active"><a href="#">Donaciones</a></li>
-                <li><a href="#">Consulta</a></li>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="p_login.php"><span class="glyphicon glyphicon-user"></span> Login</a></li>
-                <li><a href="p_alta_donante.php"><span class="glyphicon glyphicon-log-in"></span> Registro</a></li>
-            </ul>
+            <?php
+                    if (isset($_SESSION['Correo_Donante'])) {
+                        echo '<ul class="nav navbar-nav navbar-right">
+                        <li><a href="p_usuario.php"><span class="glyphicon glyphicon-user"></span> '.$_SESSION['Correo_Donante'].'</a></li>
+                        <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Cerrar Sesión</a></li>
+                        </ul>';
+                    } else {
+                        echo '<ul class="nav navbar-nav navbar-right">
+                        <li><a href="p_login.php"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+                        <li><a href="p_alta_donante.php"><span class="glyphicon glyphicon-log-in"></span> Registro</a></li>
+                        </ul>';
+                    }
+                ?>
         </div>
     </nav>
-    <form class="bloque" id="form">
+    <form class="bloque" id="form" action="donacion_monetaria.php" method="POST">
         <div class="parte1">
             <img src="imagenes/donaciona.png" alt="donaciona" class="ajustar-imagen">
         </div>

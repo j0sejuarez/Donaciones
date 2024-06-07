@@ -8,14 +8,11 @@ if (isset($_POST['cantidad'], $_POST['cuenta_origen'], $_POST['metodo'], $_POST[
     $cuenta_destino = $_POST['cuenta_destino'];
     $recibido = $_POST['recibido'];
 
-    // Aquí deberías realizar la validación y limpieza de datos según sea necesario
-
-    // Luego, inserta los datos en la base de datos
-    require('conexion.php'); // Reemplaza 'conexion.php' con el nombre de tu archivo de conexión
-    $link = cargar_bd(); // Asumiendo que esta función carga la base de datos
-
+    require('conexion.php'); 
+    $link = cargar_bd(); 
+    
     if ($link) {
-        $sql = "INSERT INTO donacion_monetaria (cantidad, cuenta_origen, metodo, cuenta_destino, recibido) 
+        $sql = "INSERT INTO donacion (cantidad, cuenta_origen, metodo, cuenta_destino, recibido) 
                 VALUES ('$cantidad', '$cuenta_origen', '$metodo', '$cuenta_destino', '$recibido')";
 
         if (mysqli_query($link, $sql)) {

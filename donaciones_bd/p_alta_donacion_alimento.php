@@ -27,7 +27,7 @@
             </ul>
         </div>
     </nav>
-    <form class="bloque" id="form">
+    <form class="bloque" id="form" action="donacion_alimentos.php" method="POST">
         <div class="parte1">
             <img src="imagenes/donacionc.png" alt="donacionc" class="ajustar-imagen">
         </div>

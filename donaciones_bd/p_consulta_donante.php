@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/s_baja-donante-donacion.css">
 </head>
 <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -50,21 +49,15 @@
     </nav>
 <body>
     <div id="bloque">
-        <div class="parte1">
-            <h1>Consultar Donante</h1>
-        </div>
+        <h1>Consultar donante</h1>
         <form method="post" action="consulta_donante.php">
-            <div class="parte2">
-                <h2><label for="id_d">ID Donante</label></h2>
-                <input class="int" type="number" id="id_d" name="id_d" required>
-            </div>
-            <div class="parte3">
+            <p>
+            <p><label for="id_d">ID Donante</label></p>
+            <input class="int" type="number" id="id_d" name="id_d" required>
+            <p>
                 <input class="boton" type="submit" value="Consultar">
-            </div>
+            </p>
         </form>
     </div>
-    <footer>
-        <p class="p_footer">© 2024 Donaciones UABC</p>
-    </footer>
 </body>
 </html>

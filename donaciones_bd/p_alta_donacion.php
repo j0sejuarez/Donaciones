@@ -32,7 +32,6 @@ if ($link) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/s_alta_donacion.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -41,12 +40,12 @@ if ($link) {
                 <a class="navbar-brand" href="index.php">Donaciones UABC</a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="index.php">Inicio</a></li>
+                <li class="active"><a href="index.php">Inicio</a></li>
                 <?php
                 if (isset($_SESSION['Correo_Donante']) && $_SESSION['Correo_Donante'] == 'josefjaceves@gmail.com') {
                     echo '
                     <ul class="nav navbar-nav">
-                    <li class="active"><a href="p_alta_donacion.php">Donaciones</a></li>
+                    <li><a href="p_alta_donacion.php">Donaciones</a></li>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Consulta <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="p_consulta_donante.php">Donantes</a></li>
@@ -70,113 +69,78 @@ if ($link) {
         </div>
     </nav>
     <h1>Alta de Donación</h1>
-<form id="donacionForm" action="alta_donacion.php" method="POST" >
-    <div class="bloque">
-    <div class="parte1">
-        <h2><label for="donante">ID Donante</label></h2>
-        <input type="number" id="donante" name="donante" required> 
-    </div>
-    <div class="parte2">
-        <h2><label for="direccion">Dirección</label></h2>
-        <input type="text" id="direccion" name="direccion" required>
-    </div>
-    <div class="parte3">
-        <h2><label for="fecha_donacion">Fecha de Donación</label></h2>
-        <input type="datetime-local" id="fecha_donacion" name="fecha_donacion" required>
-    </div>
-    <div class="parte5">
-        <h2><label for="donacion_realizada">Donación Realizada</label></h2>
-        <input type="checkbox" id="donacion_realizada" name="donacion_realizada">
-    </div>
+<form id="donacionForm" action="alta_donacion.php" method="POST">
+    <label for="donante">ID Donante:</label>
+    <input type="number" id="donante" name="donante" required><br><br>
+    
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" name="direccion" required><br><br>
 
-    <div class="parte4">
-        <h2><label for="tipo_donacion">Tipo de Donación</label></h2>
-        <select id="tipo_donacion" name="tipo_donacion" required>
-            <option value="">Seleccione...</option>
-            <?php
-                if (!empty($tipo_donaciones)) {
-                    foreach ($tipo_donaciones as $id => $tipo) {
-                        echo '<option value="' . $id . '">' . $tipo . '</option>';
-                    }
-                } else {
-                    echo '<option value="">No hay opciones disponibles</option>';
+    <label for="fecha_donacion">Fecha de Donación:</label>
+    <input type="datetime-local" id="fecha_donacion" name="fecha_donacion" required><br><br>
+    
+    <label for="donacion_realizada">Donación Realizada:</label>
+    <input type="checkbox" id="donacion_realizada" name="donacion_realizada"><br><br>
+    
+    <label for="tipo_donacion">Tipo de Donación:</label>
+    <select id="tipo_donacion" name="tipo_donacion" required>
+        <option value="">Seleccione...</option>
+        <?php
+            if (!empty($tipo_donaciones)) {
+                foreach ($tipo_donaciones as $id => $tipo) {
+                    echo '<option value="' . $id . '">' . $tipo . '</option>';
                 }
-            ?>
-        </select>
-    </div>
-    </div>
-        
+            } else {
+                echo '<option value="">No hay opciones disponibles</option>';
+            }
+        ?>
+    </select><br><br>
     
     <div id="alimentosFields" class="hidden">
-        <div class="bloque2-2">
-            <div class="parte6almo">
-                <h2><label for="tipo_alimento">Tipo de Alimento</label></h2>
-                <input type="text" id="tipo_alimento" name="tipo_alimento"> 
-            </div>
-            <div class="parte7almo">
-                <h2><label for="caducidad">Caducidad</label></h2>
-                <input type="date" id="caducidad" name="caducidad">
-            </div>
-            <div class="parte9almo">
-                <h2><label for="descripcion_alimento">Descripción</label></h2>
-                <textarea id="descripcion_alimento" name="descripcion_alimento"></textarea>
-            </div>
-            <div class="parte8almo">
-                <h2><label for="cantidad_alimentos">Cantidad</label></h2>
-                <input type="number" id="cantidad_alimentos" name="cantidad_alimentos" required>
-            </div>
-        </div>
+        <label for="tipo_alimento">Tipo de Alimento:</label>
+        <input type="text" id="tipo_alimento" name="tipo_alimento"><br><br>
+        
+        <label for="caducidad">Caducidad:</label>
+        <input type="date" id="caducidad" name="caducidad"><br><br>
+        
+        <label for="descripcion_alimento">Descripción:</label>
+        <textarea id="descripcion_alimento" name="descripcion_alimento"></textarea><br><br>
+        
+        <label for="cantidad_alimentos">Cantidad:</label>
+        <input type="number" id="cantidad_alimentos" name="cantidad_alimentos" required><br><br>
     </div>
     
     <div id="materialesFields" class="hidden">
-        <div class="bloque2-1">
-            <div class="parte6mat">
-                <h2><label for="tipo_material">Tipo de Material</label></h2>
-                <input type="text" id="tipo_material" name="tipo_material">
-            </div>
-            <div class="parte7mat">
-                <h2><label for="descripcion_material">Descripción</label></h2>
-                <textarea id="descripcion_material" name="descripcion_material"></textarea>
-            </div>
-            <div class="parte8mat">
-                <h2><label for="cantidad_materiales">Cantidad</label></h2>
-                <input type="number" id="cantidad_materiales" name="cantidad_materiales" required>
-            </div>
-        </div>
+        <label for="tipo_material">Tipo de Material:</label>
+        <input type="text" id="tipo_material" name="tipo_material"><br><br>
+        
+        <label for="descripcion_material">Descripción:</label>
+        <textarea id="descripcion_material" name="descripcion_material"></textarea><br><br>
+        
+        <label for="cantidad_materiales">Cantidad:</label>
+        <input type="number" id="cantidad_materiales" name="cantidad_materiales" required><br><br>
     </div>
     
     <div id="monetariaFields" class="hidden">
-        <div class="bloque2-2">
-            <div class="parte6almo">
-                <h2><label for="metodo_donacion">Método de Donación</label></h2>
-                <select id="metodo_donacion" name="metodo_donacion">
-                    <option value="Transferencia">Transferencia</option>
-                    <option value="Efectivo">Efectivo</option>
-                </select>
-            </div>
-            <div class="parte9almo">
-                <h2><label for="cuenta_destino">Cuenta Destino</label></h2>
-                <input type="text" id="cuenta_destino" name="cuenta_destino" maxlength="16">
-            </div>
-            <div class="parte8almo">
-                <h2><label for="cuenta_origen">Cuenta Origen</label></h2>
-                <input type="text" id="cuenta_origen" name="cuenta_origen">
-            </div>
-            <div class="parte7almo">
-                <h2><label for="cantidad_monetaria">Cantidad</label></h2>
-                <input type="number" id="cantidad_monetaria" name="cantidad_monetaria" required>
-            </div>
-        </div>
+        <label for="metodo_donacion">Método de Donación:</label>
+        <select id="metodo_donacion" name="metodo_donacion">
+            <option value="Transferencia">Transferencia</option>
+            <option value="Efectivo">Efectivo</option>
+        </select><br><br>
+        
+        <label for="cuenta_destino">Cuenta Destino:</label>
+        <input type="text" id="cuenta_destino" name="cuenta_destino" maxlength="16"><br><br>
+        
+        <label for="cuenta_origen">Cuenta Origen:</label>
+        <input type="text" id="cuenta_origen" name="cuenta_origen"><br><br>
+        
+        <label for="cantidad_monetaria">Cantidad:</label>
+        <input type="number" id="cantidad_monetaria" name="cantidad_monetaria" required><br><br>
     </div>
-    <div class="bloque3">
-        <div class="parteBoton">
-            <button type="submit">Registrar</button>
-        </div>
-    </div>
+    
+    <button type="submit">Enviar</button>
 </form>
-<footer>
-     <p class="p_footer">© 2024 Donaciones UABC</p>
-</footer></html>
+
 <script>
     document.getElementById('tipo_donacion').addEventListener('change', function () {
         document.getElementById('alimentosFields').classList.add('hidden');
