@@ -13,11 +13,11 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Donaciones</a>
+                <a class="navbar-brand" href="index.php">Donaciones UABC</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Casa</a></li>
-                <li><a href="p_donaciones.php">Donaciones</a></li>
+                <li><a href="index.php">Inicio</a></li>
+                <li class="active"><a href="#">Donaciones</a></li>
                 <li><a href="#">Consulta</a></li>
             </ul>
 
@@ -29,7 +29,7 @@
     </nav>
     <form class="bloque" id="form">
         <div class="parte1">
-            <img src="#" alt="donacionb" class="ajustar-imagen">
+            <img src="imagenes/donacionb.png" alt="donacionb" class="ajustar-imagen">
         </div>
         <div class="parte2">
             <h2><label for='cantidad'>Cantidad</label></h2>

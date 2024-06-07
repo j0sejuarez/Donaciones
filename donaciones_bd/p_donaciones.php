@@ -13,10 +13,10 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">WebSiteName</a>
+                    <a class="navbar-brand" href="index.php">Donaciones UABC</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="index.php">Inicio</a></li>
                     <li class="active"><a href="#">Donaciones</a></li>
                     <li><a href="#">Consulta</a></li>
                 </ul>    
