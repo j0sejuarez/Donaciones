@@ -41,7 +41,7 @@
                     Las donaciones monetarias son una forma común de apoyar a organizaciones benéficas o causas específicas, estas pueden ser realizadas a través de diferentes métodos, como transferencias por tarjetas de crédito o débito, y efectivo.
                 </p>
                 <form id="form">
-                    <input type="submit" name="login" formaction="#" value="Donar ahora">
+                    <input type="submit" name="login" formaction="p_alta_donacion_monetaria.php" value="Donar ahora">
                 </form>
             </div>
             <div class="parte3">
@@ -55,12 +55,11 @@
                     Las donaciones de bienes materiales son una forma valiosa de apoyar a organizaciones benéficas, especialmente aquellas que se enfocan en ayudar a personas en situación de vulnerabilidad. Estas donaciones pueden incluir objetos como ropa, libros, juguetes, y otros artículos que puedan ser útiles para los beneficiarios.
                 </p>
                 <form id="form">
-                    <input type="submit" name="login" formaction="#" value="Donar ahora">
+                    <input type="submit" name="login" formaction="p_alta_donacion_material.php" value="Donar ahora">
                 </form> 
             </div>
             <div class="parte5">
                 <img src="imagenes/donacionc.png" alt="donacionc" class="ajustar-imagen">
-                
             </div>
             <div class="parte6">
                 <h2>
@@ -70,7 +69,7 @@
                     Las donaciones de alimentos son una forma específica de apoyar a organizaciones benéficas que se enfocan en la distribución de alimentos a personas necesitadas. Estas donaciones pueden incluir alimentos no perecederos, como cereales, legumbres, y otros productos que puedan ser almacenados y distribuidos de manera eficiente. 
                 </p>
                 <form id="form">
-                    <input type="submit" name="login" formaction="#" value="Donar ahora">
+                    <input type="submit" name="login" formaction="p_alta_donacion_alimento.php" value="Donar ahora">
                 </form>
             </div>
         </div>
